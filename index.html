@@ -3,23 +3,21 @@
 <head>
   <title>Mockup of Science Friday</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet"
-    href="font-awesome-4.7.0/css/font-awesome.css">
+  href="font-awesome-4.7.0/css/font-awesome.css">
   <style>
   html{
     display: flex;
     font-size: 16px;
     font-family: sans-serif;
-
   }
   body {
-
+    max-width: 100vw;
   }
   .first-wrap {
-    width: 99.5%;
     box-shadow: 0 0 0 .5rem #fdcf5d;
     min-height: 100vh;
-
   }
   .header {
     display: flex;
@@ -117,15 +115,19 @@
     padding:10rem;
   }
   .index {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
   .indexrow {
+    width: 100vw;
     display: flex;
     flex-direction: row;
   }
   .indexrowbox {
-    flex:auto;
-    border: 1px solid #ddd;
-    padding:4rem;
+    flex: 1 0 0;
+    border: 0.5px solid #ddd;
+    padding:3rem;
   }
   footer {
     display: flex;
@@ -133,43 +135,60 @@
     margin-top: .5rem;
     margin-left: -.5rem;
   }
+  .footerbox1{
+    width: 50%;
+  }
   .footerbox1-wrap {
-    flex:1;
     display: flex;
     background-color: #444;
     padding: 5rem;
   }
-  .footerbox1 .footer-address {
+  .footerbox1-wrap .footer-address {
     text-align: left;
     padding: 1em;
     color:#999;
   }
-  .footerbox1 nav ul {
+  .footerbox1-wrap-right {
+    display: flex;
     flex-direction: column;
+  }
+  .directory {
     text-align: left;
-    color: #bbb;
     font-weight: bold;
   }
+  .directory ul  {
+    flex-direction: column;
+  }
   .footerbox1 li {
-    padding: 0.5em;
-    margin-top: -.5rem;
+    color:#ccc;
+    padding: 1.25em;
+    margin-top: -1rem;
+  }
+  .footer-social li {
+    font-size: 1.5rem;
   }
   .signup-subscribe {
-    flex-direction: column;
-    padding: 2em;
-  }
-  .footer-social  {
+    text-align: left;
+    color: #aaa;
+    font-style: italic;
     display: flex;
+    background-color: #444;
+    padding: 1em;
+  }
+  .signup-subscribe label {
+    border: 1px solid #999;
+    width: 20vw;
+    padding: .5em;
   }
   .footerbox2 {
     flex:1 1 20%;
     background-color: #333;
+    color: #ddd;
   }
   </style>
 </head>
 <body>
   <div class="first-wrap">
-
     <div class="header">
       <div class="logo">
         <div class="flexlogo">
@@ -248,64 +267,80 @@
     <div class="index">
       <div class="indexrow">
         <div class="indexrowbox">
+          <i class="fa fa-medkit" aria-hidden="true"></i>
+          Health
+        </div>
+        <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
+          Earth Science
+        </div>
+        <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
-          content
-        </div>
-        <div class="indexrowbox">
-          content
-        </div>
-        <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
       </div>
       <div class="indexrow">
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
         <div class="indexrowbox">
+          <i class="fa fa-globe" aria-hidden="true"></i>
           content
         </div>
       </div>
     </div>
   </div>
-  <footer>
-    <div class="footerbox1">
-      <div class="footerbox1-wrap">
-        <div class="footer-address">
-          <p>
-            19 West 44th Street, Suite 412
-          </p>
-          <p>
-            New York, NY 10036
-          </p>
-        </div>
-        <nav>
+</div>
+<footer>
+  <div class="footerbox1">
+    <div class="footerbox1-wrap">
+      <div class="footer-address">
+        <p>
+          19 West 44th Street, Suite 412
+        </p>
+        <p>
+          New York, NY 10036
+        </p>
+      </div>
+      <div class="footerbox1-wrap-right">
+        <nav class="directory">
           <ul>
             <li>
               ABOUT US
@@ -326,37 +361,43 @@
               JOBS
             </li>
           </ul>
+        </nav>
+        <nav class="social">
           <ul class="footer-social">
             <li>
-              @
+              <i class="fa fa-facebook" aria-hidden="true"></i>
             </li>
             <li>
-              @
+              <i class="fa fa-youtube" aria-hidden="true"></i>
             </li>
             <li>
-              @
+              <i class="fa fa-twitter" aria-hidden="true"></i>
             </li>
             <li>
-              @
+              <i class="fa fa-podcast" aria-hidden="true"></i>
             </li>
           </ul>
         </nav>
-
       </div>
-      <form class="signup-subscribe">
-        <label>
-          Sign up for our newsletter
-        </label>
-        <label>
-          Subscribe
-        </label>
-      </form>
+
     </div>
-    <div class="footerbox2">
-      contentLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec q
-    </div>
+    <form class="signup-subscribe">
+      <label>
+        Sign up for our newsletter
+      </label>
+      <label>
+        Subscribe
+      </label>
+    </form>
+  </div>
+  <div class="footerbox2">
+    <h2>$52</h2>
+    <h3>Give a dollar for every Friday!</h3>
+    <p>
+      Thank you for helping us continue making science fun for everyone.
+    </p>
+    <h5>Support Science Friday today</h5>
+  </div>
   </footer>
-
-
 </body>
 </html>
